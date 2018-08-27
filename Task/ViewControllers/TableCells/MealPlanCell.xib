@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealPlanCell" rowHeight="167" id="KGk-i7-Jjw" customClass="MealPlanCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="166.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-jQ-FPg">
+                        <rect key="frame" x="10" y="0.0" width="360" height="158.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-fS-pLA">
+                                <rect key="frame" x="0.0" y="34" width="360" height="1"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4zn-cp-k9b"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal" translatesAutoresizingMaskIntoConstraints="NO" id="Gpy-mq-jkA">
+                                <rect key="frame" x="8" y="6" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="B8s-mn-V6f"/>
+                                    <constraint firstAttribute="height" constant="23" id="tr4-tt-eHe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-i3-KGg">
+                                <rect key="frame" x="56" y="7" width="66" height="19.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Nachste Mealzeit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hta-Ea-1ii">
+                                <rect key="frame" x="56" y="43" width="119" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Gebackene Hanscenshegel mit Pommes Frites und Mischgemuse mit Apfel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nix-vB-LSY">
+                                <rect key="frame" x="56" y="67.5" width="301" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Dessert:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-69-mka">
+                                <rect key="frame" x="56" y="123" width="56" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frankfurter Kranz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-CM-Gbe">
+                                <rect key="frame" x="124" y="123" width="108.5" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gpy-mq-jkA" firstAttribute="top" secondItem="Bvv-jQ-FPg" secondAttribute="top" constant="6" id="E0E-99-1B3"/>
+                            <constraint firstAttribute="trailing" secondItem="nix-vB-LSY" secondAttribute="trailing" constant="3" id="E1F-Bp-Ewt"/>
+                            <constraint firstItem="nix-vB-LSY" firstAttribute="top" secondItem="hta-Ea-1ii" secondAttribute="bottom" constant="7.5" id="I3F-MD-1G3"/>
+                            <constraint firstItem="gkg-69-mka" firstAttribute="leading" secondItem="nix-vB-LSY" secondAttribute="leading" id="IXr-nq-f01"/>
+                            <constraint firstItem="S4a-CM-Gbe" firstAttribute="leading" secondItem="gkg-69-mka" secondAttribute="trailing" constant="12" id="Rjt-s8-Qxi"/>
+                            <constraint firstItem="oe0-i3-KGg" firstAttribute="top" secondItem="Bvv-jQ-FPg" secondAttribute="top" constant="7" id="Tb5-XN-wmh"/>
+                            <constraint firstItem="nix-vB-LSY" firstAttribute="leading" secondItem="hta-Ea-1ii" secondAttribute="leading" id="VfU-wL-wR3"/>
+                            <constraint firstItem="Gpy-mq-jkA" firstAttribute="leading" secondItem="Bvv-jQ-FPg" secondAttribute="leading" constant="8" id="YHO-HL-rp7"/>
+                            <constraint firstItem="oe0-i3-KGg" firstAttribute="leading" secondItem="Gpy-mq-jkA" secondAttribute="trailing" constant="25" id="aWB-b8-U2j"/>
+                            <constraint firstAttribute="bottom" secondItem="gkg-69-mka" secondAttribute="bottom" constant="18.5" id="cFT-Xd-12T"/>
+                            <constraint firstItem="fpK-fS-pLA" firstAttribute="leading" secondItem="Bvv-jQ-FPg" secondAttribute="leading" id="g19-X3-oT3"/>
+                            <constraint firstItem="hta-Ea-1ii" firstAttribute="top" secondItem="fpK-fS-pLA" secondAttribute="bottom" constant="8" id="kIr-De-Q2w"/>
+                            <constraint firstItem="fpK-fS-pLA" firstAttribute="top" secondItem="Gpy-mq-jkA" secondAttribute="bottom" constant="5" id="krB-WX-bo9"/>
+                            <constraint firstAttribute="trailing" secondItem="fpK-fS-pLA" secondAttribute="trailing" id="tT1-ej-RIn"/>
+                            <constraint firstItem="gkg-69-mka" firstAttribute="top" secondItem="nix-vB-LSY" secondAttribute="bottom" constant="7.5" id="u2N-D9-3Yh"/>
+                            <constraint firstItem="hta-Ea-1ii" firstAttribute="leading" secondItem="oe0-i3-KGg" secondAttribute="leading" id="uOq-Zj-Awg"/>
+                            <constraint firstItem="fpK-fS-pLA" firstAttribute="top" secondItem="oe0-i3-KGg" secondAttribute="bottom" constant="7" id="xnj-IR-Xdj"/>
+                            <constraint firstItem="S4a-CM-Gbe" firstAttribute="top" secondItem="nix-vB-LSY" secondAttribute="bottom" constant="7.5" id="zmu-Ur-xIU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Bvv-jQ-FPg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4mS-aH-glY"/>
+                    <constraint firstAttribute="trailing" secondItem="Bvv-jQ-FPg" secondAttribute="trailing" constant="10" id="HG5-iT-DfY"/>
+                    <constraint firstItem="Bvv-jQ-FPg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IYc-np-fhG"/>
+                    <constraint firstAttribute="bottom" secondItem="Bvv-jQ-FPg" secondAttribute="bottom" constant="8" id="rCV-pK-fpt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.44638270547945208" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dessert" destination="S4a-CM-Gbe" id="EB9-3O-4Ho"/>
+                <outlet property="mainMeal" destination="nix-vB-LSY" id="mo8-Lv-Jc5"/>
+                <outlet property="mealView" destination="Bvv-jQ-FPg" id="eVe-Ua-rP0"/>
+            </connections>
+            <point key="canvasLocation" x="1" y="126.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="meal" width="512" height="512"/>
+    </resources>
+</document>

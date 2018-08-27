@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="263" id="KGk-i7-Jjw" customClass="QuestionCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="263"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="262.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLt-LP-nER">
+                        <rect key="frame" x="10" y="0.0" width="420" height="254.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questions" translatesAutoresizingMaskIntoConstraints="NO" id="IVU-Ze-e1u">
+                                <rect key="frame" x="8" y="8" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="4pD-gB-wC1"/>
+                                    <constraint firstAttribute="height" constant="23" id="VeQ-a8-V83"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionarires" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2M-lv-2K5">
+                                <rect key="frame" x="51" y="10" width="98" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Anamnesis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiK-II-q7m">
+                                <rect key="frame" x="8" y="51" width="71.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-Is-xg5">
+                                <rect key="frame" x="357.5" y="53" width="30" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-Mv-Okk">
+                                <rect key="frame" x="8" y="89" width="380" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anamnesis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c51-jl-kY7">
+                                <rect key="frame" x="8" y="105" width="71.5" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTx-oR-lif">
+                                <rect key="frame" x="357.5" y="105" width="30" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tcX-1Q-2IX">
+                                <rect key="frame" x="8" y="136" width="380" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anamnesis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT2-Td-fc5">
+                                <rect key="frame" x="8" y="152" width="71.5" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-PO-9hT">
+                                <rect key="frame" x="357.5" y="159" width="30" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-7d-iDT">
+                                <rect key="frame" x="8" y="183" width="380" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QRI-7d-iDT" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="0kB-PK-ewT"/>
+                            <constraint firstAttribute="trailing" secondItem="QRI-7d-iDT" secondAttribute="trailing" constant="32" id="77p-Kn-R1m"/>
+                            <constraint firstItem="PT2-Td-fc5" firstAttribute="top" secondItem="tcX-1Q-2IX" secondAttribute="bottom" constant="14" id="8kL-dD-upT"/>
+                            <constraint firstItem="QRI-7d-iDT" firstAttribute="top" secondItem="PT2-Td-fc5" secondAttribute="bottom" constant="14" id="9UE-Fz-BsU"/>
+                            <constraint firstItem="KTx-oR-lif" firstAttribute="top" secondItem="hUs-Mv-Okk" secondAttribute="bottom" constant="14" id="DOm-Gl-mrE"/>
+                            <constraint firstItem="B2M-lv-2K5" firstAttribute="leading" secondItem="IVU-Ze-e1u" secondAttribute="trailing" constant="20" id="Dhc-7a-VAw"/>
+                            <constraint firstAttribute="trailing" secondItem="hUs-Mv-Okk" secondAttribute="trailing" constant="32" id="E3b-JQ-NEb"/>
+                            <constraint firstAttribute="trailing" secondItem="tcX-1Q-2IX" secondAttribute="trailing" constant="32" id="H8Q-We-7Tn"/>
+                            <constraint firstItem="hUs-Mv-Okk" firstAttribute="top" secondItem="AiK-II-q7m" secondAttribute="bottom" constant="8" id="K96-5k-wr1"/>
+                            <constraint firstItem="U6G-Is-xg5" firstAttribute="top" secondItem="vLt-LP-nER" secondAttribute="top" constant="53" id="OPG-QL-ghF"/>
+                            <constraint firstItem="PT2-Td-fc5" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="Pu1-ad-dqW"/>
+                            <constraint firstAttribute="bottom" secondItem="QRI-7d-iDT" secondAttribute="bottom" constant="69.5" id="Sax-ME-tfc"/>
+                            <constraint firstItem="Pqa-PO-9hT" firstAttribute="top" secondItem="tcX-1Q-2IX" secondAttribute="bottom" constant="21" id="Umf-S9-58H"/>
+                            <constraint firstAttribute="trailing" secondItem="U6G-Is-xg5" secondAttribute="trailing" constant="32.5" id="Zlv-qb-jh0"/>
+                            <constraint firstItem="tcX-1Q-2IX" firstAttribute="top" secondItem="c51-jl-kY7" secondAttribute="bottom" constant="14" id="c4D-yN-jNq"/>
+                            <constraint firstAttribute="trailing" secondItem="KTx-oR-lif" secondAttribute="trailing" constant="32.5" id="d7h-X0-sIq"/>
+                            <constraint firstItem="c51-jl-kY7" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="eEC-sQ-tv8"/>
+                            <constraint firstItem="hUs-Mv-Okk" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="eTI-Nq-c0w"/>
+                            <constraint firstItem="IVU-Ze-e1u" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="h2v-k2-eDy"/>
+                            <constraint firstItem="c51-jl-kY7" firstAttribute="top" secondItem="hUs-Mv-Okk" secondAttribute="bottom" constant="14" id="hZY-Tp-1Lt"/>
+                            <constraint firstItem="AiK-II-q7m" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="jAs-Ij-Snf"/>
+                            <constraint firstAttribute="trailing" secondItem="Pqa-PO-9hT" secondAttribute="trailing" constant="32.5" id="jgu-Sc-fc6"/>
+                            <constraint firstItem="IVU-Ze-e1u" firstAttribute="top" secondItem="vLt-LP-nER" secondAttribute="top" constant="8" id="nFU-V8-S7g"/>
+                            <constraint firstItem="B2M-lv-2K5" firstAttribute="top" secondItem="vLt-LP-nER" secondAttribute="top" constant="10" id="s4Y-Fx-QeI"/>
+                            <constraint firstItem="AiK-II-q7m" firstAttribute="top" secondItem="IVU-Ze-e1u" secondAttribute="bottom" constant="20" id="sCS-mX-w6C"/>
+                            <constraint firstItem="tcX-1Q-2IX" firstAttribute="leading" secondItem="vLt-LP-nER" secondAttribute="leading" constant="8" id="wNs-l4-ckc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vLt-LP-nER" secondAttribute="bottom" constant="8" id="6iV-e3-cIQ"/>
+                    <constraint firstItem="vLt-LP-nER" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dQu-9N-2Lo"/>
+                    <constraint firstItem="vLt-LP-nER" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kPa-dl-uU0"/>
+                    <constraint firstAttribute="trailing" secondItem="vLt-LP-nER" secondAttribute="trailing" constant="10" id="tOf-QW-zcE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="anamnesisAnswerCount" destination="U6G-Is-xg5" id="vc3-4B-0fI"/>
+                <outlet property="anamnesisProgressView" destination="hUs-Mv-Okk" id="wuE-ro-tj1"/>
+                <outlet property="anamnesisQuestionLabel" destination="AiK-II-q7m" id="rb0-Oh-m3I"/>
+                <outlet property="feedbackAnswerCount" destination="KTx-oR-lif" id="sdl-Ls-1wW"/>
+                <outlet property="feedbackProgressView" destination="tcX-1Q-2IX" id="gRE-gv-5E3"/>
+                <outlet property="feedbackQuestionLabel" destination="c51-jl-kY7" id="Vk8-AO-chZ"/>
+                <outlet property="questionView" destination="vLt-LP-nER" id="apq-QJ-dCh"/>
+                <outlet property="scoringAnswerCount" destination="Pqa-PO-9hT" id="9Iv-SK-6gr"/>
+                <outlet property="scoringProgressView" destination="QRI-7d-iDT" id="LL0-LT-NRk"/>
+                <outlet property="scoringQuestionLabel" destination="PT2-Td-fc5" id="NaJ-wg-dnn"/>
+            </connections>
+            <point key="canvasLocation" x="94" y="163.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="questions" width="225" height="225"/>
+    </resources>
+</document>
