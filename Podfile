@@ -14,6 +14,8 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'Firebase/Core'
+pod 'Alamofire'
+pod 'SwiftyJSON'
 
 
 end

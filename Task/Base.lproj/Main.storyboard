@@ -160,16 +160,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mdoc" translatesAutoresizingMaskIntoConstraints="NO" id="Xkm-gf-usm">
                                 <rect key="frame" x="70" y="70" width="235" height="95"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIg-KX-sl3">
+                                <rect key="frame" x="16" y="420" width="343" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DFZ-9C-hkn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="GitHub Login">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="githubLoginBtnPressed:" destination="GTZ-mp-JkC" eventType="touchUpInside" id="k91-9V-4gN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92954605820000002" green="0.66560411450000001" blue="0.053813025360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="t9f-nH-zM3" firstAttribute="trailing" secondItem="rIg-KX-sl3" secondAttribute="trailing" constant="16" id="E2w-IL-iFu"/>
+                            <constraint firstItem="t9f-nH-zM3" firstAttribute="bottom" secondItem="rIg-KX-sl3" secondAttribute="bottom" constant="207" id="KBk-vx-htJ"/>
                             <constraint firstItem="Xkm-gf-usm" firstAttribute="leading" secondItem="t9f-nH-zM3" secondAttribute="leading" constant="70" id="SGQ-WZ-cdA"/>
                             <constraint firstItem="Xkm-gf-usm" firstAttribute="top" secondItem="t9f-nH-zM3" secondAttribute="top" constant="50" id="dUz-lZ-wHu"/>
+                            <constraint firstItem="rIg-KX-sl3" firstAttribute="leading" secondItem="t9f-nH-zM3" secondAttribute="leading" constant="16" id="g9u-OJ-3ps"/>
                             <constraint firstItem="t9f-nH-zM3" firstAttribute="trailing" secondItem="Xkm-gf-usm" secondAttribute="trailing" constant="70" id="xT1-dP-J6i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t9f-nH-zM3"/>
                     </view>
                     <connections>
+                        <outlet property="githubLoginBtn" destination="rIg-KX-sl3" id="tNp-8X-xb0"/>
                         <outlet property="loginView" destination="XSb-Xg-na8" id="Ngi-aQ-LRF"/>
                         <segue destination="Har-1t-oX9" kind="show" identifier="mainView" id="Kiy-ph-9oE"/>
                     </connections>

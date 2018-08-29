@@ -12,23 +12,37 @@ import TwitterCore
 import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
+import SafariServices
+import Alamofire
+import SwiftyJSON
 
 class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
+    @IBOutlet weak var githubLoginBtn: UIButton! {
+        didSet {
+            githubLoginBtn.layer.cornerRadius = 5.0
+        }
+    }
     let viewModel = HomePageViewModel()
     var fbLoginSuccess = false
     let global = Globals()
+    var authSession: SFAuthenticationSession?
+    var githubTokenURL: URL?
+    //var code = ""
     @IBOutlet var loginView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         addSkipButton()
         addTwitterLoginBtn()
         addFacebookLoginBtn()
+       
         }
     
     override func viewDidAppear(_ animated: Bool) {
         if (FBSDKAccessToken.current() != nil && fbLoginSuccess == true)
         {
             skip()
+        } else {
+            UserDefaults.standard.set(false, forKey: global.LOGGED_IN)
         }
     }
     
@@ -48,12 +62,14 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
                         return
                     } else {
                         print("Successfully created a Firebase-Twitter user: ", user?.additionalUserInfo as Any)
+                        self.saveLoggedState()
+                        self.skip()
                     }
                 })
-                self.saveLoggedState()
-                self.skip()
+               
             } else {
                 print("error: \(String(describing: error?.localizedDescription))")
+                
             }
         })
         logInButton.layer.cornerRadius = logInButton.frame.size.height/2;
@@ -130,4 +146,81 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
         def.synchronize()
        
     }
+    
+    //MARK: GETTING GITHUB LOGIN URL AND SIGNING IN WITH GITHUB IN FIREBASE
+    func getAuthenticateURL() -> URL {
+        
+        var urlComponent = URLComponents(string: "https://github.com/login/oauth/authorize")!
+        
+        var queryItems =  urlComponent.queryItems ?? []
+        
+        queryItems.append(URLQueryItem(name: "client_id", value: "18048ed83fb3545c6620"))
+        queryItems.append(URLQueryItem(name: "redirect_uri", value: "myTask://connect/github/callback"))
+        
+        urlComponent.queryItems = queryItems
+        print("URL is :\(urlComponent.url!)")
+        return urlComponent.url!
+        
+    }
+    func authenticate(with url: URL, completion: @escaping ((_ token: String?, _ error: Error?) -> Void)) {
+        
+        authSession?.cancel()
+        
+        authSession = SFAuthenticationSession(url: url, callbackURLScheme: nil, completionHandler: { url, error in
+            if error != nil {
+                print("Error getting Github token: ", error as Any)
+            } else {
+                print("The code is :", url!.absoluteString)
+                let url = url!.absoluteString
+                let code = url.substring(from: url.range(of: "code=")!.upperBound)
+                let params : [String : String] = ["client_id" : self.global.CLIENT_ID, "client_secret" : self.global.CLIENT_SECRET, "code" : code]
+                self.getGithubToken(url: self.global.GET_TOKEN_URL, parameters: params)
+     
+            }
+       
+        })
+        
+        authSession?.start()
+    }
+    func getGithubToken(url: String, parameters: [String: String]) {
+        Alamofire.request(url, method: .post, parameters: parameters,  headers: global.HEADER).responseJSON { (response) in
+            if response.result.isSuccess {
+                self.saveLoggedState()
+                self.skip()
+                print("Token is :", response.result.value as Any)
+                let jsonResponse: JSON = JSON(response.result.value as Any)
+                if let jsonToken = jsonResponse["access_token"].string {
+                    let token = jsonToken
+                    let credential = GitHubAuthProvider.credential(withToken: token)
+                    Auth.auth().signInAndRetrieveData(with: credential, completion: { (authResult, error) in
+                        if error != nil {
+                            print("Error signing in with Github in Firebase")
+                        } else {
+                            print("User successfully signed in Firebase through Github account")
+                            
+                        }
+                    })
+                }
+                
+            } else {
+                print("Error getting token")
+            }
+        }
+    }
+    
+    @IBAction func githubLoginBtnPressed(_ sender: UIButton) {
+        getAuthenticateURL()
+        authenticate(with: getAuthenticateURL()) { (token, error) in
+            if error != nil {
+                print("Error")
+            } else {
+                print("Token is :", AuthTokenResult.init().token)
+            }
+        }
+        
+        
+    }
+    
+    
+    
 }
