@@ -82,7 +82,7 @@
         
  
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            return cellForPosition(position: (viewModel?.presentOrder[indexPath.row])!, indexPath: indexPath)
+            return cellForPosition(position: (viewModel?.presentOrder[indexPath.row])!)
         }
         
         func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -133,16 +133,16 @@
         }
         
         //MARK: Switch cases for reordering
-        func cellForPosition(position : String, indexPath: IndexPath) -> UITableViewCell{
+        func cellForPosition(position : String) -> UITableViewCell{
             switch position {
             case "therapy":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "therapyCell", for: indexPath) as! TherapyPlanCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "therapyCell") as! TherapyPlanCell
                 cell.updateTherapyPlan(therapies: (viewModel?.Therapy?.therapies)!)
                 cell.updateDatesInTherapyPlan(dates: (viewModel?.dates)!)
                 return cell
                 //break
             case "meal":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "mealPlanCell", for: indexPath) as! MealPlanCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "mealPlanCell") as! MealPlanCell
                 cell.updateMealUI(meal: (viewModel?.mealPlan)!)
                 return cell
                 //break

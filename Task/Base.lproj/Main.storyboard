@@ -161,13 +161,13 @@
                                 <rect key="frame" x="70" y="70" width="235" height="95"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIg-KX-sl3">
-                                <rect key="frame" x="16" y="420" width="343" height="40"/>
+                                <rect key="frame" x="16" y="417" width="343" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DFZ-9C-hkn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
-                                <state key="normal" title="GitHub Login">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Login with Github">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -178,7 +178,7 @@
                         <color key="backgroundColor" red="0.92954605820000002" green="0.66560411450000001" blue="0.053813025360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="t9f-nH-zM3" firstAttribute="trailing" secondItem="rIg-KX-sl3" secondAttribute="trailing" constant="16" id="E2w-IL-iFu"/>
-                            <constraint firstItem="t9f-nH-zM3" firstAttribute="bottom" secondItem="rIg-KX-sl3" secondAttribute="bottom" constant="207" id="KBk-vx-htJ"/>
+                            <constraint firstItem="t9f-nH-zM3" firstAttribute="bottom" secondItem="rIg-KX-sl3" secondAttribute="bottom" constant="210" id="KBk-vx-htJ"/>
                             <constraint firstItem="Xkm-gf-usm" firstAttribute="leading" secondItem="t9f-nH-zM3" secondAttribute="leading" constant="70" id="SGQ-WZ-cdA"/>
                             <constraint firstItem="Xkm-gf-usm" firstAttribute="top" secondItem="t9f-nH-zM3" secondAttribute="top" constant="50" id="dUz-lZ-wHu"/>
                             <constraint firstItem="rIg-KX-sl3" firstAttribute="leading" secondItem="t9f-nH-zM3" secondAttribute="leading" constant="16" id="g9u-OJ-3ps"/>
