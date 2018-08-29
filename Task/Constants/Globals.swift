@@ -15,5 +15,7 @@ class Globals {
     let CLIENT_SECRET = "6bec92eaee38e18a660b22a901ce9b84aaf459af"
     let LOGGED_IN = "isLoggedIn"
     let HEADER = ["Accept": "application/json"]
+    let BASE_URL = "https://github.com/login/oauth/authorize"
+    let REDIRECT_URI = "myTask://connect/github/callback"
     let GET_TOKEN_URL = "https://github.com/login/oauth/access_token"
 }

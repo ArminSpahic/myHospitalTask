@@ -49,7 +49,9 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     func addTwitterLoginBtn() {
         // Twitter Login
         let logInButton = TWTRLogInButton(logInCompletion: { session, error in
-            if (session != nil) {
+            if (session?.authToken != nil) {
+                self.saveLoggedState()
+                self.skip()
                 print("signed in as \(String(describing: session?.userName))")
                 print("userID \(String(describing: session?.userID))")
                 print("authToken \(String(describing: session?.authToken))")
@@ -62,8 +64,7 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
                         return
                     } else {
                         print("Successfully created a Firebase-Twitter user: ", user?.additionalUserInfo as Any)
-                        self.saveLoggedState()
-                        self.skip()
+                        
                     }
                 })
                
@@ -150,12 +151,12 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     //MARK: GETTING GITHUB LOGIN URL AND SIGNING IN WITH GITHUB IN FIREBASE
     func getAuthenticateURL() -> URL {
         
-        var urlComponent = URLComponents(string: "https://github.com/login/oauth/authorize")!
+        var urlComponent = URLComponents(string: global.BASE_URL)!
         
         var queryItems =  urlComponent.queryItems ?? []
         
-        queryItems.append(URLQueryItem(name: "client_id", value: "18048ed83fb3545c6620"))
-        queryItems.append(URLQueryItem(name: "redirect_uri", value: "myTask://connect/github/callback"))
+        queryItems.append(URLQueryItem(name: "client_id", value: global.CLIENT_ID))
+        queryItems.append(URLQueryItem(name: "redirect_uri", value: global.REDIRECT_URI))
         
         urlComponent.queryItems = queryItems
         print("URL is :\(urlComponent.url!)")
@@ -214,7 +215,7 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
             if error != nil {
                 print("Error")
             } else {
-                print("Token is :", AuthTokenResult.init().token)
+                print("Success")
             }
         }
         

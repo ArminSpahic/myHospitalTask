@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         let twitterLogin = TWTRTwitter.sharedInstance().application(app, open: url, options: options)
         let facebookLogin = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
-        let urlG = URL(string: "myTask://connect/github/callback")
+//        let urlG = URL(string: "myTask://connect/github/callback")
 //        UIApplication.shared.open(urlG!) { (result) in
 //            if result {
 //                print("GITHUB success code is: \(result.description)")
