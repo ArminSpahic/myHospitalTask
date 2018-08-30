@@ -12,6 +12,7 @@ class UserDataService {
 
   static let shared = UserDataService()
     let defaults = UserDefaults.standard
+    let global = Globals()
   
     
     func populateData(completion: (HomePageViewModel) -> Void) {
@@ -52,8 +53,23 @@ class UserDataService {
             }
         }
         completion(viewModel)
+    }
+    
+    func getAuthenticateURL() -> URL {
+        
+        var urlComponent = URLComponents(string: global.BASE_URL)!
+        
+        var queryItems =  urlComponent.queryItems ?? []
+        
+        queryItems.append(URLQueryItem(name: "client_id", value: global.CLIENT_ID))
+        queryItems.append(URLQueryItem(name: "redirect_uri", value: global.REDIRECT_URI))
+        
+        urlComponent.queryItems = queryItems
+        print("URL is :\(urlComponent.url!)")
+        return urlComponent.url!
         
     }
+    
     }
     
 

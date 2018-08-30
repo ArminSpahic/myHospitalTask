@@ -27,7 +27,7 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     let global = Globals()
     var authSession: SFAuthenticationSession?
     var githubTokenURL: URL?
-    //var code = ""
+    let userDataService = UserDataService()
     @IBOutlet var loginView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,20 +149,6 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     //MARK: GETTING GITHUB LOGIN URL AND SIGNING IN WITH GITHUB IN FIREBASE
-    func getAuthenticateURL() -> URL {
-        
-        var urlComponent = URLComponents(string: global.BASE_URL)!
-        
-        var queryItems =  urlComponent.queryItems ?? []
-        
-        queryItems.append(URLQueryItem(name: "client_id", value: global.CLIENT_ID))
-        queryItems.append(URLQueryItem(name: "redirect_uri", value: global.REDIRECT_URI))
-        
-        urlComponent.queryItems = queryItems
-        print("URL is :\(urlComponent.url!)")
-        return urlComponent.url!
-        
-    }
     func authenticate(with url: URL, completion: @escaping ((_ token: String?, _ error: Error?) -> Void)) {
         
         authSession?.cancel()
@@ -210,17 +196,12 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     @IBAction func githubLoginBtnPressed(_ sender: UIButton) {
-        authenticate(with: getAuthenticateURL()) { (token, error) in
+         authenticate(with: userDataService.getAuthenticateURL()) { (token, error) in
             if error != nil {
                 print("Error")
             } else {
                 print("Success")
             }
         }
-        
-        
     }
-    
-    
-    
 }
