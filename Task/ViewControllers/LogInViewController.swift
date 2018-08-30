@@ -210,7 +210,6 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     @IBAction func githubLoginBtnPressed(_ sender: UIButton) {
-        getAuthenticateURL()
         authenticate(with: getAuthenticateURL()) { (token, error) in
             if error != nil {
                 print("Error")

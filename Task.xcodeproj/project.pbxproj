@@ -16,6 +16,7 @@
 		2F4E10DF2124D01A00940EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E10DE2124D01A00940EFE /* Assets.xcassets */; };
 		2F4E10E22124D01A00940EFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E10E02124D01A00940EFE /* LaunchScreen.storyboard */; };
 		2F4E10FA212571FD00940EFE /* DoctorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E10F9212571FD00940EFE /* DoctorModel.swift */; };
+		2F765717213800DA001C69C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F765716213800DA001C69C8 /* Constants.swift */; };
 		2FB85D162133FF9200DA847F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB85D152133FF9200DA847F /* SafariServices.framework */; };
 		2FCE0A17212AE5BD00254301 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCE0A16212AE5BD00254301 /* ChecklistViewController.swift */; };
 		2FCE0A19212AE95C00254301 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCE0A18212AE95C00254301 /* QuestionModel.swift */; };
@@ -54,6 +55,7 @@
 		2F4E10E12124D01A00940EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F4E10E32124D01A00940EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4E10F9212571FD00940EFE /* DoctorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorModel.swift; sourceTree = "<group>"; };
+		2F765716213800DA001C69C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2FB85D152133FF9200DA847F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		2FCE0A16212AE5BD00254301 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		2FCE0A18212AE95C00254301 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2F33B8B6213466A700475153 /* Globals.swift */,
+				2F765716213800DA001C69C8 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				2FCE0A19212AE95C00254301 /* QuestionModel.swift in Sources */,
 				2FDABC0B2129BACB00F6F408 /* MealPlan.swift in Sources */,
 				2FDABBFF2129876000F6F408 /* QuestionCell.swift in Sources */,
+				2F765717213800DA001C69C8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +553,10 @@
 				DEVELOPMENT_TEAM = WVB94P2VKT;
 				INFOPLIST_FILE = Task/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "http---www.arminspahic.com-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -566,7 +573,10 @@
 				DEVELOPMENT_TEAM = WVB94P2VKT;
 				INFOPLIST_FILE = Task/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "http---www.arminspahic.com-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
