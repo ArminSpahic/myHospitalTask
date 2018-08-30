@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if UserDefaults.standard.bool(forKey: Globals().LOGGED_IN) == true {
-            let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController")
-            self.window?.rootViewController = navigationController
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+            self.window?.rootViewController = tabBarController
         } else {
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
             self.window?.rootViewController = initialViewController

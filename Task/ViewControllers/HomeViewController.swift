@@ -8,7 +8,7 @@
 
     import UIKit
 
-    class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,DoctorHeaderDelegate {
+    class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DoctorHeaderDelegate {
         
         @IBOutlet weak var tableView: UITableView!
         var viewModel: HomePageViewModel?
