@@ -34,6 +34,17 @@ class DoctorTableHeader : UIView {
         self.clipsToBounds = true;
     }
     
+    func updateDoctorInfo(docInfo: DoctorModel) {
+        doctorName.text = docInfo.doctorName
+        doctorType.text = docInfo.doctorPosition
+        doctorImage.image = UIImage(named: docInfo.doctorImage)
+
+    }
+    
+    func updateMessageInfo(msgInfo: MessageInfoModel) {
+        messageTitleLabel.text = msgInfo.messageTitle
+        messageTextLabel.text = msgInfo.messageText
+    }
     
     @IBAction func dismissAction(_ sender: Any) {
         delegate?.didTapDismissInHeader()

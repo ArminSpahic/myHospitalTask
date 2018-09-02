@@ -31,6 +31,7 @@ class MyClinicCell: UITableViewCell {
         medicalCenterNameLabel.text = clinicInfo.medicalCenterName
         chekInDateLabel.text = clinicInfo.checkInDate
         checkOutDateLabel.text = clinicInfo.checkOutDate
+        clinicImageView.image = UIImage(named: clinicInfo.clinicImage)
     }
     }
     

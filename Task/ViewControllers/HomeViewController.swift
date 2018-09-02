@@ -88,6 +88,8 @@
         func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let headerView = Bundle.main.loadNibNamed("DoctorTableHeader", owner: self, options: nil)?.first as? DoctorTableHeader
             headerView?.delegate = self;
+            headerView?.updateDoctorInfo(docInfo: (viewModel?.doctorInfo)!)
+            headerView?.updateMessageInfo(msgInfo: (viewModel?.messageInfo)!)
             return headerView
         }
         func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
