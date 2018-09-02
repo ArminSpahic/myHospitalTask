@@ -149,7 +149,7 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     //MARK: GETTING GITHUB LOGIN URL AND SIGNING IN WITH GITHUB IN FIREBASE
-    func authenticate(with url: URL, completion: @escaping ((_ token: String?, _ error: Error?) -> Void)) {
+    func authenticate(with url: URL, completion: @escaping CompletionHandler) {
         
         authSession?.cancel()
         
@@ -196,11 +196,11 @@ class LogInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     @IBAction func githubLoginBtnPressed(_ sender: UIButton) {
-         authenticate(with: userDataService.getAuthenticateURL()) { (token, error) in
-            if error != nil {
-                print("Error")
-            } else {
+        authenticate(with: userDataService.getAuthenticateURL()) { (success) in
+            if success {
                 print("Success")
+            } else {
+                print("Error")
             }
         }
     }
