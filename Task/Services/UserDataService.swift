@@ -29,7 +29,7 @@ class UserDataService {
         viewModel.dates = DateModel(today: "Heute", todaysDate: "Montag 13.", dateFrom: "26. Oktober", dateTo: "15. November")
         viewModel.mealPlan = MealPlan(mealDescription: "Gebackene Hahnschenschegel mit Pommes Frites und Mischgemuse mit Apfel", dessert: "Frankfurter Kranz")
         viewModel.doctorInfo = DoctorModel(doctorName: "Dr. Wolfgang Wechsler", doctorPosition: "Head Physicist", doctorImage: "doctorImage")
-        viewModel.messageInfo = MessageInfoModel(messageTitle: "Hello Michael", messageText: "we wish you a very pleasent stay. Please take a look on your checklist to not forget anything important")
+        viewModel.messageInfo = MessageInfoModel(messageTitle: "Hello Michael", messageText: "We wish you a very pleasent stay. Please take a look on your checklist to not forget anything important")
         viewModel.myClinicInfo = MyClinicModel(medicalCenterName: "Rehabilitationsklinik fur Orthopedie und Geriatrie", checkInDate: "26. Oktober", checkOutDate: "15. November", clinicImage: "center", medicalCenterCity: "- Berlin")
         viewModel.questions.append(QuestionModel(questionName: "Anamnesis"))
         viewModel.questions.append(QuestionModel(questionName: "Feedback"))
